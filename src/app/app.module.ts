@@ -3,13 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AppComponent } from './app.component';
-import { MyTable } from './my-table/my-table.component';
 import { ScrollbarHelper } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MyTable
+    AppComponent
   ],
   imports: [
     BrowserModule,
