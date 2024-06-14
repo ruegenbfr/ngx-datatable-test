@@ -2,14 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ngx-datatable firefox issues demo</title>
-  <base href="/">
+  <title>Ngx-Datatable example with different angular versionns</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 </head>
 <body>
-    <iframe src="/ang13/index.html" width="270" height="200" style="border:1px solid black;">
+    <h2>
+        Ngx-Datatable row overlay issue demo
+    </h2>
+    <p>
+
+        This page demonstrates a row overlay issue with ngx-datatable in firefox (<b>v&ge;126</b>) using angular &ge;14.<br>
+        All tables below are supposed to show the same content. The tables are using different angular versions. <br>
+        The table using angular ^13 displays the rows properly but the other ones show all rows overlaying each other in one single row.<br>
+        <br>
+        This demo table is working well with all angular versions &ge;13 on Chrome, Edge, Safari.<br>
+        This demo table is working even well with all angular versions &ge;13 in Firefox (<b>&le;</b>125).<br>
+        So this problem only shows when ngx-datatable is used with browser Firefox v&ge;126 and angular &ge;14.<br>
+        <br>
+        Firefox v126 was released recently and all other releases (inclusive beta versions) so far (17 June 24) are showing this artefact.
+    </p>
+    <iframe src="https://ruegenbfr.github.io/ngx-datatable-test/ang13/index.html" width="360" height="220" style="border:none;">
     </iframe>
 
-    <iframe src="/ang14/index.html" width="270" height="200" style="border:none;">
+    <iframe src="https://ruegenbfr.github.io/ngx-datatable-test/ang14/index.html" width="360" height="220" style="border:none;">
     </iframe>
+
+    <iframe src="https://ruegenbfr.github.io/ngx-datatable-test/ang15/index.html" width="360" height="220" style="border:none;">
+    </iframe>
+
+<h3>Used &commat;swimlane/ngx-datatable version: 20.1.0</h3>
+
+<h3>Template Code:</h3>
+    <pre>
+        .vscroll-table {
+            border-style: solid;
+            border-width: 1pt;
+            height: 100pt;
+            width: 250pt;
+
+            .datatable-header {
+                background-color: lightgray;
+                font-weight: bold;
+            }
+
+            .datatable-footer {
+                background-color: lightgray;
+                font-weight: bold;
+            }
+        }
+
+        ...
+
+        &lt;ngx-datatable
+           class="vscroll-table"
+            [rows]="rows"
+            [rowHeight]="20"
+            [columns]="columns"
+            [columnMode]="ColumnMode.force"
+            <b>[headerHeight]="30"</b>
+            [scrollbarV]="true"
+            [footerHeight]="30"
+        &gt;
+        &lt;/ngx-datatable&gt;
+    </pre>
 </body>
 </html>
