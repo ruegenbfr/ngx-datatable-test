@@ -1,21 +1,34 @@
 <style>
-    .my-container {
+    /* .my-container {
         display: flex; flex-flow: row;
         width: 600pt;
     }
     .table-wrapper {
         width: 50%;
-    }
+    } */
     .vscroll-table {
+        border-style: solid;
+        border-width: 1pt;
         height: 100pt;
+        width: 250pt;
+
+        .datatable-header {
+            background-color: lightgray;
+            font-weight: bold;
+        }
+
+        .datatable-footer {
+            background-color: lightgray;
+            font-weight: bold;
+        }
     }
 </style>
-<h2>Firefox issues with @swimlane/ngx-datatable with angular14+</h2>
+<!-- <h2>Firefox issues with &#64;swimlane/ngx-datatable with angular14+</h2> -->
 <h3>
-    @swimlane/ngx-datatable version: 20.1.0<br>
-    Current angular version: {{ angularVersion }}
+    <!-- &#64;swimlane/ngx-datatable version: 20.1.0<br> -->
+    Angular version: {{ angularVersion }}
 </h3>
-<div class="my-container">
+<!-- <div class="my-container"> -->
     <!-- <div class="table-wrapper">
         <h3>Ngx-Datatable without vertical scrollbar</h3>
         <ngx-datatable
@@ -30,18 +43,18 @@
         >
         </ngx-datatable>
     </div> -->
-    <div class="table-wrapper">
-        <h3>Ngx-Datatable Firefox-Issue with v scrollbar</h3>
+    <!-- <div class="table-wrapper"> -->
+        <!-- <h3>Ngx-Datatable Firefox-Issue with v scrollbar</h3> -->
         <ngx-datatable
-            class="material vscroll-table"
+            class="vscroll-table"
             [rows]="rows"
             [rowHeight]="20"
             [columns]="columns"
             [columnMode]="ColumnMode.force"
             [headerHeight]="30"
             [scrollbarV]="true"
-            [footerHeight]="50"
+            [footerHeight]="30"
         >
         </ngx-datatable>
-    </div>
-</div>
+    <!-- </div> -->
+<!-- </div> -->
