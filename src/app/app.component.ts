@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { ColumnMode } from '@swimlane/ngx-datatable';
 
 @Component({
@@ -8,6 +8,7 @@ import { ColumnMode } from '@swimlane/ngx-datatable';
 })
 export class AppComponent {
   title = 'firefox-issue';
+  angularVersion = VERSION.full;
   rows = [
     { name: 'Henry Gustaffson', location: 'Hogwarts' },
     { name: 'Alice Wildermore', location: 'Wunderland' },

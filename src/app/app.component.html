@@ -11,8 +11,12 @@
     }
 </style>
 <h2>Firefox issues with @swimlane/ngx-datatable with angular14+</h2>
+<h3>
+    @swimlane/ngx-datatable version: 20.1.0<br>
+    Current angular version: {{ angularVersion }}
+</h3>
 <div class="my-container">
-    <div class="table-wrapper">
+    <!-- <div class="table-wrapper">
         <h3>Ngx-Datatable without vertical scrollbar</h3>
         <ngx-datatable
             class="material"
@@ -25,7 +29,7 @@
             [footerHeight]="50"
         >
         </ngx-datatable>
-    </div>
+    </div> -->
     <div class="table-wrapper">
         <h3>Ngx-Datatable Firefox-Issue with v scrollbar</h3>
         <ngx-datatable
@@ -36,7 +40,6 @@
             [columnMode]="ColumnMode.force"
             [headerHeight]="30"
             [scrollbarV]="true"
-            [scrollbarH]="true"
             [footerHeight]="50"
         >
         </ngx-datatable>
